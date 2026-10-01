@@ -4,11 +4,9 @@ services:
     name: ai-chatbot
     runtime: node
     plan: free
-    buildCommand: cd client && npm install && npm run build && cd ../server && npm install
-    startCommand: cd server && npm start
+    buildCommand: cd client && npm install --include=dev && npm run build && cd ../server && npm install
+    startCommand: cd server && npm run start:demo   # in-memory MongoDB (history resets on restart). For persistence use `npm start` + MONGODB_URI
     envVars:
-      - key: MONGODB_URI
-        sync: false
       - key: LLM_API_URL
         sync: false
       - key: LLM_API_KEY
