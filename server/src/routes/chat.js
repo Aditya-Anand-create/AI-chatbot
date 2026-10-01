@@ -59,6 +59,7 @@ export function chatRouter({ stream = defaultStream } = {}) {
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
       Connection: "keep-alive",
+      "X-Accel-Buffering": "no", // tell reverse proxies (nginx etc.) not to buffer the stream
     });
     const send = (obj) => res.write(`data: ${JSON.stringify(obj)}\n\n`);
 
