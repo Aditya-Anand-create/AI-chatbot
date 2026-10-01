@@ -117,3 +117,9 @@ Covers: context window, full chat flow with persistence, validation, delete, SSE
 
 ## Ideas to extend
 Auth (JWT), per-user chats, markdown rendering, stop-generation button, token-based context trimming, rate limiting.
+
+## Live demo deployment (Render free tier)
+`render.yaml` deploys one free web service that serves both the API and the built React app.
+The demo runs with an **in-memory MongoDB** (`npm run start:demo`), so chat history resets when the free
+service restarts or sleeps (it sleeps after ~15 min idle; the first load can take about a minute).
+For persistent history, point `MONGODB_URI` at MongoDB Atlas (free M0 cluster) and use `npm start` instead.
