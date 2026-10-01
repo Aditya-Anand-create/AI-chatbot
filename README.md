@@ -1,5 +1,7 @@
 # AI Chatbot (React + Node/Express + MongoDB)
 
+**Live demo:** https://ai-chatbot-h0st.onrender.com (free tier: first load may take ~30s to wake up; demo history resets on restart)
+
 A full-stack ChatGPT-style assistant: streaming replies, saved conversation history, and a provider-agnostic LLM layer that works with free APIs.
 
 **Stack:** React (Vite) - Node.js + Express - MongoDB (Mongoose) - REST API + Server-Sent Events - any OpenAI-compatible LLM API.
